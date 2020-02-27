@@ -4,18 +4,18 @@ function toggleOpenClose() {
 	let allNavItems = [...document.querySelectorAll('#nav-items a')];
 
 
-	if(navWidth.width == "") {
+	if (navWidth.width == "") {
 		navWidth.width = "100%";
 		document.getElementById("bars-icon").style.background = "var(--background-color-1)";
 
 	}
-	else{
+	else {
 		navWidth.width = "";
 		barIconStyle.background = "none";
 
 	}
-		
-	
+
+
 }
 
 //  SCROLL TOP BUTTON SCRIPT

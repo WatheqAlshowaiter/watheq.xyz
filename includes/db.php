@@ -17,11 +17,11 @@ $connection = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
 if (!$connection) {
 	die("
-			شيء غير متوقع حدث للتو ... 
+			شيء غير متوقع حدث للتو ... قد يكون بسبب سوء الاستضافة
 			ابق على تواصل معي 
 			<p><a href='https://facebook.com/watheq.show'>فيسبوك</a> </p>
 			<p><a href='https://twitter.com/watheq_show'>تويتر</a> </p>
-			<p><a href='mailto://watheq.alshowiter@gmail.com'>إيميل</a> </p>
+			<p><a href='watheq[dot]alshowiter[at]gmail[dot]com'>بريد إلكتروني</a> </p>
 			<p><a href='https://github.com/WatheqAlshowaiter'>جت هب</a> </p>
 
 		<pre>

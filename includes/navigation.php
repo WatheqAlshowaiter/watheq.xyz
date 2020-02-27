@@ -7,12 +7,6 @@
           <span id='bars-icon' class="fas fa-bars" onclick="toggleOpenClose()"></span>
         </div><div id="nav-items" onclick="toggleOpenClose()">
 
-          <!-- <a href='category.php?cat_id={$cat_id}' class='nav-link'>فئة 1</a>
-          <a href='category.php?cat_id={$cat_id}' class='nav-link'>فئة 2</a>
-          <a href='category.php?cat_id={$cat_id}' class='nav-link'>فئة 3</a>
-          <a href='category.php?cat_id={$cat_id}' class='nav-link'>فئة 4</a>
-          <a href='category.php?cat_id={$cat_id}' class='nav-link'>فئة 5</a> -->
-
           <?php
           $query = "SELECT * FROM categories LIMIT 10";
           $select_all_catgs = mysqli_query($connection, $query);

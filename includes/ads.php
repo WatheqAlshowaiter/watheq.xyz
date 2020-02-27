@@ -1,5 +1,6 @@
 <div id="ad" class="" style="height: 300px; background-image: repeating-linear-gradient(45deg, var(--background-color-2) 0 6px, var(--background-color-1) 6px 10px);">
   <p class="no-margin padding-1">إعلان</p>
+  <p>رواية إيفيانا بسكال من كتابة المبدع يونس بن عمارة</p>
 </div>
 
 <!-- <div class="card my-4">

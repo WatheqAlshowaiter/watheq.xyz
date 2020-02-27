@@ -38,53 +38,17 @@ $select_catgs_sidebar = mysqli_query($connection, $query);
   while ($row = mysqli_fetch_assoc($select_catgs_sidebar)) {
     $cat_id = $row['cat_id'];
     $cat_title = $row['cat_title'];
-    echo "<li '><a href='category.php?cat_id={$cat_id}' >{$cat_title}</a></li>";
+    echo "<a class='category padding-1' href='category.php?cat_id={$cat_id}' >{$cat_title}</a>";
   }
 
   ?>
-
-  <a class="category padding-1" href="">فئة 1</a>
-  <a class="category padding-1" href="">فئة 2</a>
+  
 </div>
 
 
-
-<!--  <div class="card my-4  text-white bg-secondary mb-3">
-            <h5 class="card-header">تصنيفات</h5>
-            <div class="card-body">
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul class="list-unstyled mb-0">
-                    <?php
-
-                    while ($row = mysqli_fetch_assoc($select_catgs_sidebar)) {
-                      $cat_id = $row['cat_id'];
-                      $cat_title = $row['cat_title'];
-                      echo "<li><a href='category.php?cat_id={$cat_id}' class='text-white'> {$cat_title}</a></li>";
-                    }
-                    ?>
-
-                  </ul>
-                </div> -->
-<!-- <div class="col-lg-6">
-                  <ul class="list-unstyled mb-0">
-                    <li>
-                      <a href="#">JavaScript</a>
-                    </li>
-                    <li>
-                      <a href="#">CSS</a>
-                    </li>
-                    <li>
-                      <a href="#">Tutorials</a>
-                    </li>
-                  </ul>
-                </div> -->
-<!--    </div>
-            </div>
-          </div>
- -->
-
 <!-- Side Widget -->
 <?php include 'includes/widget.php'; ?>
+<?php include 'includes/ads.php'; ?>
+
 
 </div>
