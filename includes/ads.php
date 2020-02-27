@@ -5,7 +5,7 @@
     <h4 class="no-margin in-block">إعلانات</h4>
   </div>
   <div class="icon-container padding-1">
-    <a href="" target="_blank">رواية إيفيانا بسكال من كتابة المبدع يونس بن عمارة</a>
+    <a href="https://youdo.blog/youarecool/" target="_blank">رواية إيفيانا بسكال من كتابة المبدع يونس بن عمارة</a>
 
   </div>
 </div>
