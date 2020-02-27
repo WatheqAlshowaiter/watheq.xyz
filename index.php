@@ -20,7 +20,7 @@
 
     <div class="post-container margin-3 main-border">
       <a href="post.php?p_id=<?php echo $row['post_id']; ?>" class="">
-        <h1 class="title padding-1 no-margin in-block"><?= $row['post_title']; ?></h1>
+        <h1 class="title padding-1 no-margin in-block"><?= $row['post_title']; ?> </h1>
       </a>
       <p class="details no-margin padding-1">
         <span class="date in-block"><?= $row['post_date'] ?></span>
@@ -36,7 +36,6 @@
     </div>
 
   <?php endwhile; ?>
-</section>
 <section class="side-bar padding-2">
   <?php include 'includes/sidebar.php' ?>
 </section>

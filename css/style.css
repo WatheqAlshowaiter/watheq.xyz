@@ -38,11 +38,11 @@ img {
 	width: auto;
 }
 
-.nav-bar, .nav-bar .main-bar, .main-section, .side-bar, .post-container .details, .cats-container, .soc-accounts {
+.nav-bar, .nav-bar .main-bar, .main-section, .side-bar, .post-container .details, .cats-container, .soc-accounts, .the-ad {
 	background: var(--background-color-2)
 }
 
-body, .post-container .post-text, .search-container form button, .cats-container .cats-bar, .soc-accounts .soc-bar, .result .header {
+body, .post-container .post-text, .search-container form button, .cats-container .cats-bar, .soc-accounts .soc-bar, .result .header , .the-ad .the-ad-bar{
 	background: var(--background-color-1);
 }
 
@@ -245,6 +245,11 @@ footer a {
 	text-overflow: ellipsis;
 	overflow: hidden;
 	vertical-align: top;
+}
+
+/* Advertisements  */
+.the-ad{
+	/* height: 300px; background-image: repeating-linear-gradient(45deg, var(--background-color-2) 0 6px, var(--background-color-1) 6px 10px); */
 }
 
 /* ### MEDIA QUERIES ### */
