@@ -1,99 +1,93 @@
 <?php include 'includes/db.php' ?>
 <?php include 'includes/header.php'; ?>
 
-    <!-- Navigation -->
+
+
+<!-- Navigation -->
 
 <?php include 'includes/navigation.php'; ?>
 
 
-<div class="results-container main-border margin-3">
+<!-- <div class="results-container main-border margin-3">
   <div class="background-1">
     <h4 class="no-margin in-block padding-1">نتائج البحث</h4>
   </div>
   <div class="no-result no-margin">
     <p class="padding-1 no-margin" style="background: #ffefea">عفواً لا توجد نتائج مطابقة.</p>
-    <p class="padding-1 no-margin"><a href="">العودة  للصفحة الرئيسية</a></p>
+    <p class="padding-1 no-margin"><a href="">العودة للصفحة الرئيسية</a></p>
   </div>
-</div>
-    <!-- Page Content -->
-    <div class="container">
-
-      <div class="row">
-
-        <!-- Post Content Column -->
-        <div class="col-lg-8">
-         
-          <?php 
-            if (isset($_POST['submit']) && !empty($_POST['search'])) {
-               $search = htmlentities($_POST['search']); 
-               $query  = "SELECT * FROM posts WHERE post_tags or post_title LIKE '%{$search}%' "; 
-               $search_query = mysqli_query($connection, $query); 
-
-               if(!$search_query) {
-                  die("QUERY FAILED " . mysqli_error($connection));
-               }
-
-               $count = mysqli_num_rows($search_query); 
-
-               if($count == 0){
-                echo "<br> <p class='alert alert-danger'>عفوا ، لا توجد نتائج  :(</p>"; 
-               } else {
-                echo "<br> <p class='alert alert-info'>نتائج البحث : </p>";
-                 while ($row = mysqli_fetch_assoc($search_query)) {
-               
-         ?> 
-
-              <!-- Title -->
-              <h1 class="mt-4"><a href="post.php?p_id=<?php echo $row['post_id']?>"> <?php echo $row['post_title']; ?></a></h1>
-
-              <!-- Author -->
-              <!-- <p class="lead">
-                by
-                <a href="#"><?php echo $row['post_author']; ?></a>
-              </p> -->
-
-              <hr>
-
-              <!-- Date/Time -->
-              <p> <?php echo $row['post_date']; ?></p>
-
-              <!-- Preview Image -->
-              <!-- <img src="images/<?php echo $row['post_image'] ;?>" class ="img-fluid rounded"> -->
-
-              <hr>
-
-              <!-- Post Content -->
-              <p><?php echo substr($row['post_content'], 0, 100) . "..."; ?></p>
-            <a href="post.php?p_id=<?php echo $row['post_id']?>"class="btn btn-primary">
-             إكمال القراءة >> 
-            <span class="glyphicaon glyphicaon-chevron-right"></span>
-
-          </a>  
-             <hr>
+</div> -->
 
 
-              <?php }  // end of posts (while()) ?>
-              
-            <?php 
+<section class="main-section padding-2">
+  <div class="results-container main-border margin-3">
 
-                }  // end of else $count == 0
-                }  else {
-                  header("location: index.php"); die; 
-                }  // end of else if isset($_POST['submit'])  
-          ?>
+    <?php
+    if (isset($_POST['submit']) && !empty($_POST['search'])) :
 
-          
+      $search = htmlentities($_POST['search']);
+      $query  = "SELECT * FROM posts left join categories 
+      on posts.cat_id = categories.cat_id WHERE post_tags or post_title LIKE '%{$search}%' order by post_id desc ";
+      $search_query = mysqli_query($connection, $query);
+
+      if (!$search_query) {
+        die("QUERY FAILED " . mysqli_error($connection));
+      }
+
+      $count = mysqli_num_rows($search_query);
+
+      if ($count == 0) { ?>
+        <div class="no-result no-margin">
+          <p class="padding-1 no-margin results-head" > عفواً لا توجد نتائج مطابقة، حاول البحث باستخدام كلمات أخرى</p>
+          <p class="padding-1 no-margin"><a href="">
+              << العودة للصفحة الرئيسية</a> </p> </div> <? } else { ?> <div class="background-1">
+                <h4 class="no-margin padding-1 results-head">نتائج البحث</h4>
         </div>
 
-        <!-- Sidebar Widgets Column -->
-        <?php include 'includes/sidebar.php' ?>
+  </div>
+  <?php
+        while ($row = mysqli_fetch_assoc($search_query)):
 
-      </div>
-      <!-- /.row -->
-
+  ?>
+    <div class="post-container margin-3 main-border">
+      <a href="post.php?p_id=<?php echo $row['post_id']; ?>" class="">
+        <h1 class="title padding-1 no-margin in-block"><?= $row['post_title']; ?></h1>
+      </a>
+      <p class="details no-margin padding-1">
+        <span class="date in-block"><?= $row['post_date'] ?></span>
+        <span class="cat-name in-block">
+          <a href="category.php?cat_id=<?php echo $row['cat_id'] ?>"> <?= $row['cat_title']; ?></a>
+        </span>
+      </p>
+        <p class="post-text no-margin">
+          <a href="post.php?p_id=<?php echo $row['post_id'] ?>" class="padding-1 in-block">
+            <?php echo strip_tags(substr($row['post_content'], 0, 100)) . "..."; ?>
+          </a>
+        </p>
     </div>
-    <!-- /.container -->
 
-    <!-- Footer -->
-    <?php include 'includes/footer.php'; ?>
 
+  <?php endwhile;  // end of posts (while()) 
+  ?>
+
+
+
+<?php
+
+                                                      }  // end of else $count == 0
+                                                    else :
+                                                      header("location: index.php");
+                                                      die;
+                                                    endif; // end of else if isset($_POST['submit'])  
+?>
+
+</section>
+
+
+<section class="side-bar padding-2">
+  <!-- Sidebar Widgets Column -->
+  <?php include 'includes/sidebar.php' ?>
+</section>
+
+<!-- Footer -->
+<?php include 'includes/footer.php'; ?>

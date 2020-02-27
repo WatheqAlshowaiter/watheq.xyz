@@ -1,6 +1,7 @@
 <div class="search-container main-border">
-  <form action="#">
-    <input class="in-block" type="search" name="" placeholder="ابحث في المدونة..."><button class="in-block" type="submit"><span class="fas fa-search"></span></button>
+  <form action="search.php" method="post">
+    <input class="" type="search" name="search" placeholder="ابحث في المدونة...">
+    <button class="" type="submit" name="submit"><span class="fas fa-search"></span></button>
   </form>
 </div>
 

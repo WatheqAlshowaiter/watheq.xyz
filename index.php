@@ -27,6 +27,7 @@
         <span class="cat-name in-block">
           <a href="category.php?cat_id=<?php echo $row['cat_id'] ?>"> <?= $row['cat_title']; ?></a>
         </span>
+      </p>
         <p class="post-text no-margin">
           <a href="post.php?p_id=<?php echo $row['post_id'] ?>" class="padding-1 in-block">
             <?php echo strip_tags(substr($row['post_content'], 0, 100)) . "..."; ?>
