@@ -34,37 +34,35 @@ if (isset($_GET['p_id'])) {
 
 ?>
 
+<div class="sections-container">
 
-<section class="main-section padding-2">
-  <div class="post-container margin-3 main-border">
-    <h1 class="title padding-1 no-margin in-block"> <?php echo $post_title; ?></h1>
-    <p class="details no-margin padding-1">
-      <span class="date in-block"><?= "تاريخ الإنشاء: " . $post_date; ?></span><span class="cat-name in-block"><a href="">شعر</a></span>
-    </p>
-    <div class="post-text padding-1 no-margin">
-      <?php echo $post_content; ?>
+  <section class="main-section padding-2">
+    <div class="post-container margin-3 main-border">
+      <h1 class="title padding-1 no-margin in-block"> <?php echo $post_title; ?></h1>
+      <p class="details no-margin padding-1">
+        <span class="date in-block"><?= "تاريخ الإنشاء: " . $post_date; ?></span><span class="cat-name in-block"><a href="">شعر</a></span>
+      </p>
+      <div class="post-text padding-1 no-margin">
+        <?php echo $post_content; ?>
+      </div>
+      <div class="post-tags padding-1 no-margin">
+        <b class="pa-ra in-block">وسوم</b>
+        <div class="in-block">
+          <span>وسم 1</span>
+          <span>وسم 2</span>
+          <span>وسم 3</span>
+          <span>وسم 4</span>
+          <span>وسم 4</span>
+        </div>
+      </div>
     </div>
-    <br>
-    <div class="post-tags padding-1 no-margin">
-    <b class="pa-ra in-block">وسوم</b>
-    <div class="in-block">
-      <span>وسم 1</span>
-      <span>وسم 2</span>
-      <span>وسم 3</span>
-      <span>وسم 4</span>
-      <span>وسم 4</span>
-    </div>
-  </div>
+  </section>
+  <section class="side-bar padding-2">
+    <?php include 'includes/sidebar.php'; ?>
+  </section>
 
-  </div>
+</div>
 
-
-
-
-</section>
-<section class="side-bar padding-2">
-  <?php include 'includes/sidebar.php'; ?>
-</section>
 
 
 

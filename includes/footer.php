@@ -1,3 +1,4 @@
+  
 <div id="top-button-container">
   <span class="fa fa-arrow-up" title="Go to top" onclick="topFunction()"></span>
 </div>
@@ -15,13 +16,8 @@
      
    
     </p> -->
-
-  </div>
+</div>
 </footer>
-
-
-
-
 </body>
-
+	</div>
 </html>

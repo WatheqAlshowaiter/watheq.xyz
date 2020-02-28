@@ -336,18 +336,20 @@ footer a {
 }
 
 @media only screen and (min-width: 769px) {
+
+	.sections-container {
+		display: flex;
+	}
 	section.main-section {
-		margin: 15px 3% 15px 40%;
+		width: 70%;
+		margin: 15px 3% 15px 1.5%;
 	}
 	section.side-bar {
-		position: fixed;
-		top: 50px;
-		left: 0;
-		width: 34%;
 		overflow-y: auto;
 		height: calc(100% - 160px);
 		/* nav-bar + footer + margin top and bottom = 160px */
-		margin: 15px 3%;
+		width: 30%;
+		margin: 15px 1.5% 15px 3%;
 	}
 	.post-container {
 		/* width: 97%; */

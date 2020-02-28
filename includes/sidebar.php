@@ -32,7 +32,7 @@ $select_catgs_sidebar = mysqli_query($connection, $query);
 
 <div class="cats-container margin-3 main-border">
   <div class="cats-bar padding-1">
-    <h4 class="no-margin in-block">تصنيفات</h2>
+    <h4 class="no-margin in-block">تصنيفات</h4>
   </div>
   <?php
 
@@ -50,6 +50,3 @@ $select_catgs_sidebar = mysqli_query($connection, $query);
 <!-- Side Widget -->
 <?php include 'includes/widget.php'; ?>
 <?php include 'includes/ads.php'; ?>
-
-
-</div>

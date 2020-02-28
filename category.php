@@ -32,7 +32,9 @@ if (mysqli_num_rows($select_all_posts) == 0) : ?>
         <a href="index.php" class="in-block">
           << الرجوع إلى الصفحة الرئيسية</a> </div> </div> </section> 
           
-          <?php endif; ?> <section class="main-section padding-2">
+          <?php endif; ?> 
+          
+          <section class="main-section padding-2">
             <?php
             while ($row = mysqli_fetch_assoc($select_all_posts)) :
 
