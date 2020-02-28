@@ -15,11 +15,14 @@ if (isset($_GET['cat_id'])) {
 
 <?php include 'includes/navigation.php'; ?>
 
-<?
+<?php
 
 $query = "SELECT * FROM posts where cat_id = $post_cat_id order by post_id desc";
 $select_all_posts = mysqli_query($connection, $query);
+?> 
 
+<div class="sections-container">
+<?php 
 // only if the category does not have any post 
 if (mysqli_num_rows($select_all_posts) == 0) : ?>
 
@@ -30,39 +33,42 @@ if (mysqli_num_rows($select_all_posts) == 0) : ?>
       </div>
       <div class="go-back padding-1">
         <a href="index.php" class="in-block">
-          << الرجوع إلى الصفحة الرئيسية</a> </div> </div> </section> 
-          
-          <?php endif; ?> 
-          
+          << الرجوع إلى الصفحة الرئيسية</a> </div> </div> 
+        
+  </section> <!-- end if: the category does have posts -->
+
+<?php else: ?>
+
           <section class="main-section padding-2">
+
+
             <?php
             while ($row = mysqli_fetch_assoc($select_all_posts)) :
 
             ?>
-
-<div class="post-container margin-3 main-border">
-      <a href="post.php?p_id=<?php echo $row['post_id']; ?>" class="">
-        <h1 class="title padding-1 no-margin in-block"><?= $row['post_title']; ?></h1>
-      </a>
-      <p class="details no-margin padding-1">
-        <span class="date in-block"><?= $row['post_date'] ?></span>
-        <span class="cat-name in-block">
-          <a href="category.php?cat_id=<?php echo $row['cat_id'] ?>"> <?= $row['cat_title']; ?></a>
-        </span>
-      </p>
-        <p class="post-text no-margin">
-          <a href="post.php?p_id=<?php echo $row['post_id'] ?>" class="padding-1 in-block">
-            <?php echo strip_tags(substr($row['post_content'], 0, 100)) . "..."; ?>
-          </a>
-        </p>
-    </div>
+              <div class="post-container margin-3 main-border">
+                <a href="post.php?p_id=<?php echo $row['post_id']; ?>" class="">
+                  <h1 class="title padding-1 no-margin in-block"><?= $row['post_title']; ?> </h1>
+                </a>
+                <p class="details no-margin padding-1">
+                  <span class="date in-block"><?= $row['post_date'] ?></span>
+                </p>
+                <p class="post-text no-margin">
+                  <a href="post.php?p_id=<?php echo $row['post_id'] ?>" class="padding-1 in-block">
+                    <?php echo strip_tags(substr($row['post_content'], 0, 100)) . "..."; ?>
+                  </a>
+                </p>
+              </div>
 
             <?php endwhile; ?>
+          </section>
+            <?php endif;?>
+          <section class="side-bar padding-2">
+            <?php include 'includes/sidebar.php' ?>
+          </section>
 
-            <section class="side-bar padding-2">
-              <?php include 'includes/sidebar.php'; ?>
-            </section>
+          </div>
 
 
-            <!-- Footer -->
-            <?php include 'includes/footer.php'; ?>
+          <!-- Footer -->
+          <?php include 'includes/footer.php'; ?>
