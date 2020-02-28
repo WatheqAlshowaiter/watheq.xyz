@@ -98,6 +98,7 @@ span#bars-icon, #nav-items a {
 .post-container .details span.cat-name {
 	width: 65%;
 	margin: 0 0 0 5%;
+	float: left;
 }
 
 .post-container .details .date {
