@@ -42,7 +42,7 @@ if (isset($_GET['p_id'])) {
       <p class="details no-margin padding-1">
         <span class="date in-block"><?= "تاريخ الإنشاء: " . $post_date; ?></span><span class="cat-name in-block"><a href="">شعر</a></span>
       </p>
-      <div class="post-text padding-1 no-margin">
+      <div class="post-text padding-1 no-margin post-body">
         <?php echo $post_content; ?>
       </div>
       <div class="post-tags padding-1 no-margin">
