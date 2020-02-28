@@ -24,27 +24,28 @@
           </div> -->
 
 <!-- Categories Widget -->
+<!-- Deleted becaues the are repeated the same as the navebar items -->
 <?php
-$query = "SELECT * FROM categories limit 8";
-$select_catgs_sidebar = mysqli_query($connection, $query);
+// $query = "SELECT * FROM categories limit 8";
+// $select_catgs_sidebar = mysqli_query($connection, $query);
 
 ?>
 
-<div class="cats-container margin-3 main-border">
+<!-- <div class="cats-container margin-3 main-border">
   <div class="cats-bar padding-1">
     <h4 class="no-margin in-block">تصنيفات</h4>
-  </div>
+  </div> -->
   <?php
 
-  while ($row = mysqli_fetch_assoc($select_catgs_sidebar)) {
-    $cat_id = $row['cat_id'];
-    $cat_title = $row['cat_title'];
-    echo "<a class='category padding-1' href='category.php?cat_id={$cat_id}' >{$cat_title}</a>";
-  }
+  // while ($row = mysqli_fetch_assoc($select_catgs_sidebar)) {
+  //   $cat_id = $row['cat_id'];
+  //   $cat_title = $row['cat_title'];
+  //   echo "<a class='category padding-1' href='category.php?cat_id={$cat_id}' >{$cat_title}</a>";
+  // }
 
   ?>
   
-</div>
+<!-- </div> -->
 
 
 <!-- Side Widget -->
