@@ -166,6 +166,11 @@ span#bars-icon, #nav-items a {
 .cats-container a.category:not(:last-child) {
 	border-bottom: 1px solid var(--background-color-1);
 }
+.main-section .header.no-results{
+	background-color: black;
+	color: white;
+}
+
 
 #top-button-container {
 	visibility: hidden;

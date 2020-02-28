@@ -28,7 +28,7 @@ if (mysqli_num_rows($select_all_posts) == 0) : ?>
 
   <section class="main-section padding-2">
     <div class="result main-border">
-      <div class="header padding-1">
+      <div class="header padding-1 no-results">
         <h4 class="no-margin">عذراً، لا توجد نتائج</h4>
       </div>
       <div class="go-back padding-1">
