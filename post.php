@@ -13,7 +13,8 @@
 
 if (isset($_GET['p_id'])) {
   $post_id = $_GET['p_id'];
-  $query = "SELECT * FROM posts WHERE post_id = $post_id limit 1";
+  $query = "SELECT * FROM posts left join categories 
+  on posts.cat_id = categories.cat_id  WHERE post_id = $post_id limit 1";
 
   $select_post_by_id = mysqli_query($connection, $query);
 
@@ -29,6 +30,9 @@ if (isset($_GET['p_id'])) {
     $post_tags = $row['post_tags'];
     $post_comment_count = $row['post_comment_count'];
     $post_status = $row['post_status'];
+    // from the join
+    $cat_id = $row['cat_id'];
+    $cat_tile = $row['cat_title'];
   }
 }
 
@@ -40,7 +44,7 @@ if (isset($_GET['p_id'])) {
     <div class="post-container margin-3 main-border">
       <h1 class="title padding-1 no-margin in-block"> <?php echo $post_title; ?></h1>
       <p class="details no-margin padding-1">
-        <span class="date in-block"><?= "تاريخ الإنشاء: " . $post_date; ?></span><span class="cat-name in-block"><a href="">شعر</a></span>
+        <span class="date in-block"><?= "تاريخ الإنشاء: " . $post_date; ?></span><span class="cat-name in-block"><a href="category.php?cat_id=<?php echo $cat_id; ?>"><?=$cat_tile;?> </a></span>
       </p>
       <div class="post-text padding-1 no-margin post-body">
         <?php echo $post_content; ?>
