@@ -48,11 +48,8 @@ if (isset($_GET['p_id'])) {
       <div class="post-tags padding-1 no-margin">
         <b class="pa-ra in-block">وسوم</b>
         <div class="in-block">
-          <span>وسم 1</span>
-          <span>وسم 2</span>
-          <span>وسم 3</span>
-          <span>وسم 4</span>
-          <span>وسم 4</span>
+          <? echo "<span>$post_tags</span>"; ?>
+          
         </div>
       </div>
     </div>
