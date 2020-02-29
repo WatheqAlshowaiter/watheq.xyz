@@ -131,6 +131,10 @@ span#bars-icon, #nav-items a {
 	padding-left: 3px;
 }
 
+.post-container img {
+	width: 100%;
+}
+
 .search-container form input {
 	width: 85%;
 	padding: 0 4%;
