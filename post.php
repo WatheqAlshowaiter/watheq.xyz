@@ -75,46 +75,46 @@ if (isset($_GET['p_id'])) {
 <!-- /.row -->
 <!--Comment Section -->
 
-<!-- <div class="commentbox" id="post<?php //  echo $post_id; ?>"></div> -->
+<div class="commentbox" id="post<?php echo $post_id; ?>"></div>
 <!-- <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script> -->
 
-<!-- <script> -->
+<script>
   // commentBox('5715241090416640-proj');
   // import qs from 'qs';
-  // commentBox('5715241090416640-proj', {
-    // className: 'commentbox', // the class of divs to look for
-    // defaultBoxId: 'commentbox', // the default ID to associate to the div
-    // tlcParam: 'tlc', // used for identifying links to comments on your page
-    // backgroundColor: null, // default transparent
-    // textColor: null, // default black
-    // subtextColor: null, // default grey
-    // singleSignOn: null, // enables Single Sign-On (for Professional plans only)
-    // /**
-    //  * Creates a unique URL to each box on your page.
-    //  * 
-    //  * @param {string} boxId
-    //  * @param {Location} pageLocation - a copy of the current window.location
-    //  * @returns {string}
-    //  */
-    // createBoxUrl(boxId, pageLocation) {
+  commentBox('5715241090416640-proj', {
+    className: 'commentbox', // the class of divs to look for
+    defaultBoxId: 'commentbox', // the default ID to associate to the div
+    tlcParam: 'tlc', // used for identifying links to comments on your page
+    backgroundColor: null, // default transparent
+    textColor: null, // default black
+    subtextColor: null, // default grey
+    singleSignOn: null, // enables Single Sign-On (for Professional plans only)
+    /**
+     * Creates a unique URL to each box on your page.
+     * 
+     * @param {string} boxId
+     * @param {Location} pageLocation - a copy of the current window.location
+     * @returns {string}
+     */
+    createBoxUrl(boxId, pageLocation) {
 
-      // pageLocation.search = ''; // removes query string!
-      // pageLocation.hash = boxId; // creates link to this specific Comment Box on your page
-      // return pageLocation.href; // return url string
-    // },
+      pageLocation.search = ''; // removes query string!
+      pageLocation.hash = boxId; // creates link to this specific Comment Box on your page
+      return pageLocation.href; // return url string
+    },
     /**
      * Fires once the plugin loads its comments.
      * May fire multiple times in its lifetime.
      * 
      * @param {number} count
      */
-    // onCommentCount(count) {
+    onCommentCount(count) {
 
-    // }
+    }
 
 
-  // });
-  <!-- </script>  -->
+  });
+</script>
 
 </div>
 <!-- /.container -->

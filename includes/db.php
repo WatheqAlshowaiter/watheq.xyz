@@ -7,6 +7,7 @@ ini_set('display_errors', 0);
 ?> 
 <?php
 
+
 define('DB_HOST', "localhost");
 define('DB_USER', "watheqxy_1");
 define('DB_PASS', "DXw9SkMQX4weEzK");
