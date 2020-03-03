@@ -376,7 +376,7 @@ footer {
 		/* width: 75%; */
 	}
 	#nav-items a {
-		display: inline-block;
+		/* display: inline-block; */
 		text-decoration: none;
 		padding: 15px 30px;
 	}
