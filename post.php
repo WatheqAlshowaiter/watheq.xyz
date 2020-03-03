@@ -78,7 +78,7 @@ if (isset($_GET['p_id'])) {
 <div class="commentbox" id="post<?php echo $post_id; ?>"></div>
 <!-- <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script> -->
 
-<script>
+<!-- <script>
   // commentBox('5715241090416640-proj');
   // import qs from 'qs';
   commentBox('5715241090416640-proj', {
@@ -114,7 +114,7 @@ if (isset($_GET['p_id'])) {
 
 
   });
-</script>
+</script> -->
 
 </div>
 <!-- /.container -->
