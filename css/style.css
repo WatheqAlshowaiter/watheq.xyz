@@ -178,7 +178,12 @@ footer, footer a {
 }
 
 .post-container a {
-	text-decoration: none;
+
+	/* color: silver; */
+	color: #8787f3;
+}
+.post-container a:hover {
+	text-decoration: underline !important;
 }
 
 .post-container .post-tags {

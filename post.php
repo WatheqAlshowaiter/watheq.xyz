@@ -46,7 +46,7 @@ if (isset($_GET['p_id'])) {
       <p class="details no-margin padding-1">
         <span class="date"><?= $post_date; ?></span><span class="cat-name"><a href="category.php?cat_id=<?php echo $cat_id; ?>"><?=$cat_tile;?> </a></span>
       </p>
-      <div class="post-text padding-1 no-margin post-body">
+      <div class="post-text-article padding-1 no-margin post-body">
         <?php echo $post_content; ?>
       </div>
       <div class="post-tags padding-1 no-margin">
