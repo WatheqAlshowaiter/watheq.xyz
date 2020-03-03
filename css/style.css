@@ -72,7 +72,7 @@ body, .post-container .post-text, .search-container form button, .cats-container
 	font-size: var(--font-size-1);
 }
 
-.post-text {
+.post-text , .post-text-article{
 	font-size: var(--font-size-2);
 }
 
@@ -173,7 +173,7 @@ footer, footer a {
 	color: var(--background-color-2);
 }
 
-.post-text {
+.post-text, .post-text-article {
 	font-family: var(--font-post-text), sans-serif;
 }
 
