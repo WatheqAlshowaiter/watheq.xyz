@@ -7,7 +7,7 @@
 /* @import url(//cdn.rawgit.com/rtaibah/dubai-font-cdn/master/dubai-font.css); */
 
 :root {
-	--background-color-1: #fbfbfb;
+	--background-color-1: #f7f7f7;
 	--background-color-2: white;
 	--background-color-3: #d4d3d3;
 	--font-general: 'Markazi';
@@ -51,56 +51,49 @@ a {
 	text-decoration: none;
 }
 
-.nav-bar, .nav-bar .main-bar, .main-section, .side-bar, .post-container .details, .cats-container, .soc-accounts, .ad-container {
+.nav-bar, .nav-bar .main-bar, .main-section, .side-bar, .post-container .details, .cats-container, .soc-accounts, .the-ad-container {
 	background: var(--background-color-2);
 }
 
-body, .post-container .post-text, .search-container form button, .cats-container .cats-bar, .soc-accounts .soc-bar, .result .header, .ad-container .ad-header {
+body, .post-container .post-text, .search-container form button, .cats-container .cats-bar, .soc-accounts .soc-bar, .result .header, .the-ad-container .the-ad-header {
 	background: var(--background-color-1);
 }
 
 .main-bar {
 	height: 50px;
 }
+
 .main-bar img {
 	width: 75px;
 }
+
 .nav-bar .main-bar, .container .main-bar span, .container .main-bar a, #nav-items {
 	position: relative;
 }
+
 .post-container .title {
 	font-size: var(--font-size-1);
 }
 
-.post-text , .post-text-article{
+.post-text {
 	font-size: var(--font-size-2);
 }
 
-#nav-items a,
-.post-text a,
-h4, footer p,
-.post-tags,
-.ad-container .ad-content,
-.go-home-link a {
+#nav-items a, .post-text a, h4, .post-tags, .the-ad-container .the-ad-content, .go-home-link a {
 	font-size: var(--font-size-3);
 	font-weight: normal;
 }
 
-#nav-items a, .post-container .title, h4 {
+#nav-items a, .post-container .title, h4 , .the-ad-container .the-ad-content a:hover{
 	color: var(--color-1);
 }
-.post-container .date,
-.post-container .cat-name a,
-.post-container .post-text a,
-.soc-accounts .icon-container a,
-.ad-container .ad-content a {
+
+.post-container .date, .post-container .cat-name a, .post-container .post-text a, .soc-accounts .icon-container a, .the-ad-container .the-ad-content a {
 	color: var(--color-2);
 	transition: all 0.4s;
 }
 
-footer a,
-.ad-container .ad-content,
-.go-home-link {
+footer a, .the-ad-container .the-ad-content, .go-home-link {
 	text-decoration: underline;
 }
 
@@ -108,19 +101,18 @@ footer a,
 	transition: all 0.5s;
 }
 
-#nav-items a:hover,#nav-items .selected,
-.results-container .results-head,
-.main-section .header.no-results,
-footer {
+#nav-items a:hover, #nav-items .selected, .results-container .results-head, .main-section .header.no-results, footer {
 	background: var(--color-1);
 }
 
 .post-container .cat-name:hover {
 	background: var(--color-1);
 }
+
 .soc-accounts .icon-container a {
 	font-size: 12px;
 }
+
 .soc-accounts .icon-container a:hover {
 	color: var(--color-1);
 }
@@ -159,31 +151,20 @@ span#bars-icon, #nav-items a {
 	content: "تاريخ الإنشاء: ";
 }
 
-.post-container .cat-name,
-.pa-ra {
+.post-container .cat-name, .pa-ra {
 	background: var(--color-2);
 }
 
-.pa-ra, .post-container .cat-name a,
-#nav-items a:hover, #nav-items .selected,
-.results-container .results-head,
-.main-section .header.no-results h4,
-#top-button-container span,
-footer, footer a {
+.pa-ra, .post-container .cat-name a, #nav-items a:hover, #nav-items .selected, .results-container .results-head, .main-section .header.no-results h4, #top-button-container span, footer, footer a {
 	color: var(--background-color-2);
 }
 
-.post-text, .post-text-article {
+.post-text {
 	font-family: var(--font-post-text), sans-serif;
 }
 
 .post-container a {
-
-	/* color: silver; */
-	color: #8787f3;
-}
-.post-container a:hover {
-	text-decoration: underline !important;
+	text-decoration: none;
 }
 
 .post-container .post-tags {
@@ -222,7 +203,6 @@ footer, footer a {
 	height: 31px;
 }
 
-
 .cats-container a.category {
 	display: block;
 	white-space: nowrap;
@@ -232,6 +212,9 @@ footer, footer a {
 	border-bottom: 1px solid var(--background-color-1);
 }
 
+/* .the-ad-container .the-ad-content a:hover{
+	columns: var(--color-1) !important;
+} */
 
 #top-button-container {
 	visibility: hidden;
@@ -297,7 +280,6 @@ footer {
 		--font-size-2: 147%;
 		--font-size-3: 20px;
 	}
-
 	.page-container {
 		padding-bottom: 160px;
 	}
@@ -319,8 +301,6 @@ footer {
 		float: left;
 		line-height: 3;
 	}
-
-
 	#nav-items, span#bars-icon {
 		height: 100%;
 	}
@@ -347,12 +327,10 @@ footer {
 }
 
 @media only screen and (min-width: 641px) {
-
 	:root {
 		--font-size-2: 28px;
 		--font-size-3: 19px;
 	}
-
 	.nav-bar {
 		position: fixed;
 		width: 100%;
@@ -373,7 +351,6 @@ footer {
 	span#bars-icon {
 		display: none;
 	}
-
 	#nav-items {
 		display: inline;
 		right: 5%;
@@ -405,7 +382,6 @@ footer {
 		width: 30%;
 		margin: 15px 1.5% 15px 3%;
 	}
-
 	#root .app {
 		margin-left: 40% !important;
 		background: red !important;

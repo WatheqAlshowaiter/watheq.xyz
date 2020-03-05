@@ -1,10 +1,10 @@
 
 
-<div class="ad-container main-border margin-3">
-  <div class="ad-header padding-1">
+<div class="the-ad-container main-border margin-3">
+  <div class="the-ad-header padding-1">
     <h4 class="no-margin in-block">إعلانات</h4>
   </div>
-  <div class="ad-content padding-1">
+  <div class="the-ad-content padding-1">
     <a href="https://youdo.blog/youarecool/" target="_blank">رواية إيفيانا بسكال من كتابة المبدع يونس بن عمارة</a>
 
   </div>
