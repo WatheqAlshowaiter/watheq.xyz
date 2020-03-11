@@ -75,7 +75,7 @@ body, .post-container .post-text, .search-container form button, .cats-container
 	font-size: var(--font-size-1);
 }
 
-.post-text {
+.post-text, .post-text-article {
 	font-size: var(--font-size-2);
 }
 
@@ -159,8 +159,9 @@ span#bars-icon, #nav-items a {
 	color: var(--background-color-2);
 }
 
-.post-text {
+.post-text, .post-text-article {
 	font-family: var(--font-post-text), sans-serif;
+	line-height: 1.3;
 }
 
 .post-container a {
@@ -371,17 +372,27 @@ footer {
 @media only screen and (min-width: 769px) {
 	.sections-container {
 		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: flex-start;
 	}
 	section.main-section {
-		width: 70%;
+		flex-basis: 65.5%;
 		margin: 15px 3% 15px 1.5%;
 	}
 	section.side-bar {
+		flex-basis: 25.5%;
 		overflow-y: auto;
-		height: 100%;
-		width: 30%;
-		margin: 15px 1.5% 15px 3%;
+		margin: 0 1.5% 15px 3%;
+		position: sticky;
+		top: 66px; 
+		/* margin: 15px 1.5% 15px 3%; */
 	}
+	.comments-container {
+		width: 65.5%;
+		margin: 0px 3% 15px 1.5%;
+	}
+
 	#root .app {
 		margin-left: 40% !important;
 		background: red !important;

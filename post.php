@@ -59,34 +59,35 @@ if (isset($_GET['p_id'])) {
     <?php include 'includes/sidebar.php'; ?>
   </section>
 
+  <section class="comments-container">
+    <div class="main-section padding-2">
+      <div id="disqus_thread"></div>
+      <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+        var disqus_config = function() {
+          // this.page.url = <?='http://www.watheq.xyz/post.php?p_id=' . $post_id ;?>// Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = <?= $post_id; ?>; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+          var d = document,
+            s = d.createElement('script');
+          s.src = 'https://watheq-xyz-1.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>رجاء، فّعل جافاسكريبت حتى يتسنى لك التعليق <a href="https://disqus.com/?ref_noscript"></a></noscript>
+
+    </div>
+</section>
+
 </div>
 
 <!-- Comment Section Disqus -->
-<div class="section-container">
-  <section class="main-section padding-2">
-    <div id="disqus_thread"></div>
-    <script>
-      /**
-       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-
-      var disqus_config = function() {
-        // this.page.url = <?='http://www.watheq.xyz/post.php?p_id=' . $post_id ;?>// Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = <?= $post_id; ?>; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-      };
-
-      (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document,
-          s = d.createElement('script');
-        s.src = 'https://watheq-xyz-1.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-      })();
-    </script>
-    <noscript>رجاء، فّعل جافاسكريبت حتى يتسنى لك التعليق <a href="https://disqus.com/?ref_noscript"></a></noscript>
-
-  </section>
-</div>
 
 <!-- Footer -->
 <?php include 'includes/footer.php'; ?>
