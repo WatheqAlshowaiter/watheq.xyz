@@ -166,6 +166,12 @@ span#bars-icon, #nav-items a {
 
 .post-container a {
 	text-decoration: none;
+	color: #2196f3 ;
+	
+}
+.post-container a:hover {
+	color: #3f51b5;
+	
 }
 
 .post-container .post-tags {
