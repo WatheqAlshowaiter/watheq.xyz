@@ -1,8 +1,5 @@
 <?php include 'includes/db.php' ?>
 
-
-
-
 <?php
 
 // the post query 
