@@ -164,12 +164,12 @@ span#bars-icon, #nav-items a {
 	line-height: 1.3;
 }
 
-.post-container a {
+.post-container .post-text-article a {
 	text-decoration: none;
 	color: #2196f3 ;
 	
 }
-.post-container a:hover {
+.post-container .post-text-article a:hover {
 	color: #3f51b5;
 	
 }
