@@ -4,6 +4,8 @@
 // usefull for production code 
 error_reporting(0);
 ini_set('display_errors', 0);
+
+ob_start(); // output buffering
 ?> 
 <?php
 
