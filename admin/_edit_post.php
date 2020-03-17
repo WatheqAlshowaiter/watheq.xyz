@@ -9,7 +9,7 @@ if (isset($_GET['p_id'])) {
     $post_id = $row['post_id'];
     $cat_id = $row['cat_id'];
     $post_title = $row['post_title'];
-    // $post_author = $row['post_author'];
+    $post_author = $row['post_author'];
     $post_date = $row['post_date'];
     $post_image = $row['post_image'];
     $post_content = $row['post_content'];
@@ -27,7 +27,7 @@ if (isset($_POST['update_post'])) {
   $post_title = $_POST['post_title'];
   $cat_id = $_POST['post_category'];
   // $post_catgs = $_POST['post_category']; 
-  // $post_author = $_POST['post_author']; 
+  $post_author = $_POST['post_author'];
 
   // speciaal case for image 
   $post_image = $_FILES['post_image']['name'];
@@ -57,7 +57,7 @@ if (isset($_POST['update_post'])) {
   $query .= "post_date = now(), ";
   // $query .= "post_author = '$post_author',  ";
   $query .= "post_content = '$post_content', ";
-  $query .= "post_desc = '$post_desc', ";
+  $query .= " = '$', ";
   $query .= "post_tags = '$post_tags', ";
   $query .= "post_status = '$post_status',  ";
   $query .= "post_image = '$post_image' ";
@@ -97,11 +97,10 @@ if (isset($_POST['update_post'])) {
 
   </div>
   <!-- Post Author  -->
-  <!--     <div class= "form-group">
-          <label for="post_author">Post Author</label>
-          <input class="form-control" value = "<?php //echo $post_author; 
-                                                ?>" type="text" name="post_author" id="post_author">
-    </div> -->
+  <div class="form-group">
+    <label for="post_author">Post Author</label>
+    <input class="form-control" value="<?php echo $post_author; ?>" type="text" name="post_author" id="post_author">
+  </div>
   <!-- Post Image  -->
   <!-- there is something to edit -->
   <div class="form-group">
@@ -116,11 +115,13 @@ if (isset($_POST['update_post'])) {
           
           </textarea>
   </div>
+
   <!-- Post Description  -->
   <div class="form-group">
     <label for="post_content">وصف المنشور</label>
-    <input class="form-control" value="<?php echo $post_desc; ?>" type="text" name="post_desc" id="post_desc">
+    <input class="form-control" type="text" name="post_desc" id="post_desc" />
   </div>
+
   <!-- Post Tags  -->
   <div class="form-group">
     <label for="post_content">Post Tags</label>
