@@ -24,19 +24,19 @@
           // }
 
           while ($row = mysqli_fetch_assoc($select_all_catgs)) {
-            $cat_id = $row['cat_id'];
-            $cat_title = $row['cat_title'];
+            $cat_id_nav = $row['cat_id'];
+            $cat_title_nav = $row['cat_title'];
 
 
-            echo "<a href='category.php?cat_id={$cat_id}'";
+            echo "<a href='category.php?cat_id={$cat_id_nav}'";
 
-            if ($cat_id == $post_cat_id) {
+            if ($cat_id_nav == $post_cat_id) {
               echo "class='nav-link selected'";
             } else {
               echo "class='nav-link'";
             }
 
-            echo "'>{$cat_title}</a>";
+            echo "'>{$cat_title_nav}</a>";
           }
 
 
