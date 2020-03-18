@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    <Watheq ALshowaiter> -- <The content creator, mainly develepor, and the CEO of this blog > -- <@watheq_show>
+    <Watheq ALshowaiter> -- <The content creator, mainly develepor, and the CEO of this blog > -- <@watheq_show>
+
+# THANKS
+
+    <to everyone helps me either in readiing the blog posts or criticising the site>
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Apache Server Configs, jQuery, Bootstrap, PHP, Mysql, 
