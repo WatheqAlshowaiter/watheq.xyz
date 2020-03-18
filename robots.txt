@@ -2,4 +2,8 @@ Sitemap: http://watheq.xyz/sitemap.xml
 
 User-agent: *
 Crawl-delay: 120
+
+Allow: /
 Disallow: /admin/
+Disallow: /admin/*
+Disallow: /search*
