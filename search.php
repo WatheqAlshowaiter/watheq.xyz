@@ -26,7 +26,9 @@
       <?php
       if (isset($_POST['submit']) && !empty($_POST['search'])) :
 
+
         $search = htmlentities($_POST['search']);
+        $search  = mysqli_real_escape_string($connection, $search);
         $query  = "SELECT * FROM posts left join categories 
       on posts.cat_id = categories.cat_id WHERE post_tags or post_title LIKE '%{$search}%' order by post_id desc ";
         $search_query = mysqli_query($connection, $query);
