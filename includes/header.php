@@ -44,6 +44,10 @@
   <link rel="stylesheet" type="text/css" href="css/style.css?<?php echo date('l jS \of F Y h:i:s A'); ?>">
   <link rel="canonical" href="<?= isset($post_id) ? "http://watheq.xyz/post.php?p_id=$post_id" : 'http://watheq.xyz'; ?>"> <!-- needs fixing-->
 
+
+  <script data-ad-client="pub-3013099213148529" async src="https://pagead2.googlesyndication.com/
+pagead/js/adsbygoogle.js"></script>
+
 </head>
 
 <body class="no-margin">

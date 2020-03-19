@@ -10,7 +10,7 @@ if (isset($_GET['p_id'])) {
     $cat_id = $row['cat_id'];
     $post_title = $row['post_title'];
     // $post_author = $row['post_author'];
-    $post_date = $row['post_date'];
+    $post_date_modify = $row['post_date_modify'];
     $post_image = $row['post_image'];
     $post_content = $row['post_content'];
     $post_desc = $row['post_desc'];
@@ -35,7 +35,7 @@ if (isset($_POST['update_post'])) {
 
   $post_content = $_POST['post_content'];
   $post_desc = $_POST['post_desc'];
-  $post_date = date("d-mm-year");
+  $post_date_modify = date("d-mm-year");
   $post_tags = $_POST['post_tags'];
   $post_status = $_POST['post_status'];
 
@@ -54,7 +54,7 @@ if (isset($_POST['update_post'])) {
   $query  = "UPDATE posts SET ";
   $query .= "post_title = '$post_title', ";
   $query .= "cat_id = '$cat_id', ";
-  $query .= "post_date = now(), ";
+  $query .= "post_date_modify = now(), ";
   // $query .= "post_author = '$post_author',  ";
   $query .= "post_content = '$post_content', ";
   $query .= "post_desc = '$post_desc', ";

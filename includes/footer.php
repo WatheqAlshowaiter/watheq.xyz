@@ -13,6 +13,7 @@
   </footer>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+
   <script>
     window.ga = function() {
       ga.q.push(arguments)
@@ -24,6 +25,20 @@
     ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160997023-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-160997023-1');
+  </script> -->
+
   </body>
   </div>
 

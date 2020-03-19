@@ -19,55 +19,54 @@ if (isset($_GET['cat_id'])) {
 
 $query = "SELECT * FROM posts where cat_id = $post_cat_id order by post_id desc";
 $select_all_posts = mysqli_query($connection, $query);
-?> 
+?>
 
 <div class="sections-container">
-<?php 
-// only if the category does not have any post 
-if (mysqli_num_rows($select_all_posts) == 0) : ?>
+  <?php
+  // only if the category does not have any post 
+  if (mysqli_num_rows($select_all_posts) == 0) : ?>
 
-  <section class="main-section padding-2">
-    <div class="result main-border">
-      <div class="header padding-1 no-results">
-        <h4 class="no-margin">عذراً، لا توجد نتائج</h4>
-      </div>
-      <div class="go-back padding-1">
-        <a href="index.php" class="in-block">
-          << الرجوع إلى الصفحة الرئيسية</a> </div> </div> 
-        
-  </section> <!-- end if: the category does have posts -->
+    <section class="main-section padding-2">
+      <div class="result main-border">
+        <div class="header padding-1 no-results">
+          <h4 class="no-margin">عذراً، لا توجد نتائج</h4>
+        </div>
+        <div class="go-back padding-1">
+          <a href="index.php" class="in-block">
+            << الرجوع إلى الصفحة الرئيسية</a> </div> </div> </section> <!-- end if: the category does have posts -->
 
-<?php else: ?>
+            <?php else : ?>
 
-          <section class="main-section padding-2">
+              <section class="main-section padding-2">
 
-            <?php
-            while ($row = mysqli_fetch_assoc($select_all_posts)) :
+                <?php
+                while ($row = mysqli_fetch_assoc($select_all_posts)) :
 
-            ?>
-              <div class="post-container margin-3 main-border">
-                <a href="post.php?p_id=<?php echo $row['post_id']; ?>" class="">
-                  <h1 class="title padding-1 no-margin in-block"><?= $row['post_title']; ?> </h1>
-                </a>
-                <p class="details no-margin padding-1">
-                  <span class="date in-block"><?= $row['post_date'] ?></span>
-                </p>
-                <p class="post-text no-margin">
-                  <a href="post.php?p_id=<?php echo $row['post_id'] ?>" class="padding-1 in-block">
-                    <?php echo strip_tags(substr($row['post_content'], 0, 100)) . "..."; ?>
-                  </a>
-                </p>
-              </div>
+                ?>
+                  <div class="post-container margin-3 main-border">
+                    <a href="post.php?p_id=<?php echo $row['post_id']; ?>" class="">
+                      <h1 class="title padding-1 no-margin in-block"><?= $row['post_title']; ?> </h1>
+                    </a>
+                    <p class="details no-margin padding-1">
+                      <span class="date in-block"><?= $row['post_date'] ?></span>
+                      <span class="date-mod"><? echo ($row['post_date_modify'] > 0) ? "تاريخ التعديل: " . $row['post_date_modify'] : ''; ?></span>
+                    </p>
+                    <p class="post-text no-margin">
+                      <a href="post.php?p_id=<?php echo $row['post_id'] ?>" class="padding-1 in-block">
+                        <?php echo strip_tags(substr($row['post_content'], 0, 100)) . "..."; ?>
+                      </a>
+                    </p>
+                  </div>
 
-            <?php endwhile; ?>
-          </section>
-            <?php endif;?>
-          <section class="side-bar padding-2">
-            <?php include 'includes/sidebar.php' ?>
-          </section>
+                <?php endwhile; ?>
+              </section>
+            <?php endif; ?>
+            <section class="side-bar padding-2">
+              <?php include 'includes/sidebar.php' ?>
+            </section>
 
-          </div>
+        </div>
 
 
-          <!-- Footer -->
-          <?php include 'includes/footer.php'; ?>
+        <!-- Footer -->
+        <?php include 'includes/footer.php'; ?>
