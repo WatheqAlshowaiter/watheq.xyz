@@ -50,4 +50,5 @@
 
 <!-- Side Widget -->
 <?php include 'includes/widget.php'; ?>
+<?php include 'includes/mailing_list.php'; ?>
 <?php include 'includes/ads.php'; ?>
