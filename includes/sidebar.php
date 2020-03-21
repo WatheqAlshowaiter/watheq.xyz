@@ -1,3 +1,15 @@
+<div class="soc-accounts main-border margin-3">
+  <div class="soc-bar padding-1">
+    <h4 class="no-margin in-block">صفحات أساسية</h4>
+  </div>
+  <div class="padding-1">
+    <a target="_blank" href="about.php">عني</a> &nbsp;
+    <a target="_blank" href="contact_me.php">تواصل معي</a> &nbsp;
+    <a target="_blank" href="privacy_policy.php">سياسة الخصوصية</a> &nbsp;
+  </div>
+</div>
+
+
 <div class="search-container main-border">
   <form action="search.php" method="post">
     <input class="" type="search" name="search" placeholder="ابحث في المدونة...">
@@ -35,16 +47,16 @@
   <div class="cats-bar padding-1">
     <h4 class="no-margin in-block">تصنيفات</h4>
   </div> -->
-  <?php
+<?php
 
-  // while ($row = mysqli_fetch_assoc($select_catgs_sidebar)) {
-  //   $cat_id = $row['cat_id'];
-  //   $cat_title = $row['cat_title'];
-  //   echo "<a class='category padding-1' href='category.php?cat_id={$cat_id}' >{$cat_title}</a>";
-  // }
+// while ($row = mysqli_fetch_assoc($select_catgs_sidebar)) {
+//   $cat_id = $row['cat_id'];
+//   $cat_title = $row['cat_title'];
+//   echo "<a class='category padding-1' href='category.php?cat_id={$cat_id}' >{$cat_title}</a>";
+// }
 
-  ?>
-  
+?>
+
 <!-- </div> -->
 
 
