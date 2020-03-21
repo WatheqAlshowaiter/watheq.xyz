@@ -2,7 +2,7 @@
   <div class="soc-bar padding-1">
     <h4 class="no-margin in-block">صفحات أساسية</h4>
   </div>
-  <div class="padding-1">
+  <div class="padding-1 primary_links">
     <a target="_blank" href="about.php">عني</a> &nbsp;
     <a target="_blank" href="contact_me.php">تواصل معي</a> &nbsp;
     <a target="_blank" href="privacy_policy.php">سياسة الخصوصية</a> &nbsp;

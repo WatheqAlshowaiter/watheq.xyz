@@ -337,6 +337,13 @@ footer {
 
 /* end mailing list */
 
+/* primary links  */
+.primary_links a:hover{
+	text-decoration: underline;
+}
+/* endprimary links  */
+
+
 /* ### MEDIA QUERIES ### */
 
 @media only screen and (max-width: 640px) {
