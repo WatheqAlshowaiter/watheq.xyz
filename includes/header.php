@@ -27,6 +27,6 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/style.css?<?php echo date('l jS \of F Y h:i:s A'); ?>">
   <link rel="canonical" href="<?= isset($post_id) ? "http://watheq.xyz/post.php?p_id=$post_id" : 'http://watheq.xyz'; ?>">
-  <script data-ad-client="pub-3013099213148529" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script data-ad-client="ca-pub-3013099213148529" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <body class="no-margin">
   <div class="page-container">
