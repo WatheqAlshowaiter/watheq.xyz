@@ -1,3 +1,5 @@
+
+
 <div class="soc-accounts main-border margin-3">
   <div class="soc-bar padding-1">
     <h4 class="no-margin in-block">صفحات أساسية</h4>
@@ -8,14 +10,14 @@
     <a target="_blank" href="privacy_policy.php">سياسة الخصوصية</a> &nbsp;
   </div>
 </div>
-
-
 <div class="search-container main-border">
   <form action="search.php" method="post">
     <input class="" type="search" name="search" placeholder="ابحث في المدونة...">
     <button class="" type="submit" name="submit"><span class="fas fa-search"></span></button>
   </form>
 </div>
+
+
 
 
 <!-- <div class="col-md-4"> -->
